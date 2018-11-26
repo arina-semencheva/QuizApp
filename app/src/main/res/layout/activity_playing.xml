@@ -14,7 +14,8 @@
         android:layout_marginTop="25dp"
         android:gravity="center"
         android:layout_width="300dp"
-        android:layout_height="200dp" />
+        android:layout_height="200dp"
+        android:contentDescription="@string/todo" />
 
 
     <TextView
@@ -52,7 +53,7 @@
                  android:id="@+id/txtScore"
                  android:textColor="@android:color/white"
                  android:gravity="center_horizontal"
-                 android:text="0"
+                 android:text="@string/_0"
                  android:textSize="36sp"
                  android:layout_weight="1"
                  android:layout_width="0dp"
@@ -62,7 +63,7 @@
                  android:id="@+id/txtTotalQuestion"
                  android:textColor="@android:color/white"
                  android:gravity="center_horizontal"
-                 android:text="1/10"
+                 android:text="@string/_1_10"
                  android:textSize="36sp"
                  android:layout_weight="1"
                  android:layout_width="0dp"
@@ -81,7 +82,7 @@
 
          <Button
              android:id="@+id/btnAnswerA"
-             android:text="Answer A"
+             android:text="@string/answer_a"
              android:textColor="@android:color/white"
              android:textStyle="bold"
              android:theme="@style/MyButton"
@@ -94,7 +95,7 @@
 
          <Button
              android:id="@+id/btnAnswerB"
-             android:text="Answer B"
+             android:text="@string/answer_b"
              android:textColor="@android:color/white"
              android:textStyle="bold"
              android:theme="@style/MyButton"
@@ -107,7 +108,7 @@
 
          <Button
              android:id="@+id/btnAnswerC"
-             android:text="Answer C"
+             android:text="@string/answer_c"
              android:textColor="@android:color/white"
              android:textStyle="bold"
              android:theme="@style/MyButton"
@@ -120,7 +121,7 @@
 
          <Button
              android:id="@+id/btnAnswerD"
-             android:text="Answer D"
+             android:text="@string/answer_d"
              android:textColor="@android:color/white"
              android:textStyle="bold"
              android:theme="@style/MyButton"

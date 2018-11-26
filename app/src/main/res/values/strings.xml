@@ -15,4 +15,10 @@
     <string name="play">PLAY</string>
     <string name="todo">TODO</string>
     <string name="title_activity_done">Done</string>
+    <string name="_0">0</string>
+    <string name="_1_10">1/10</string>
+    <string name="answer_a">Answer A</string>
+    <string name="answer_b">Answer B</string>
+    <string name="answer_c">Answer C</string>
+    <string name="answer_d">Answer D</string>
 </resources>
