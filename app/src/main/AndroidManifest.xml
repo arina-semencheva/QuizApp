@@ -16,7 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Home"></activity>
+        <activity android:name=".Home" />
+        <activity android:name=".Start" />
+        <activity android:name=".Playing" />
+        <activity
+            android:name=".Done"
+            android:label="@string/title_activity_done"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

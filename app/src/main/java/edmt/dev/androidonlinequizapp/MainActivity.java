@@ -18,6 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
+import edmt.dev.androidonlinequizapp.Common.Common;
 import edmt.dev.androidonlinequizapp.Model.User;
 
 public class MainActivity extends AppCompatActivity {
@@ -70,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
                     if(login.getPassword().equals(pwd))
                     {
                         Intent homeActivity = new Intent(MainActivity.this,Home.class);
+                        Common.currentUser = login;
                         startActivity(homeActivity);
                         finish();
                     }

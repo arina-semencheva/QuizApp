@@ -1,6 +1,7 @@
 package edmt.dev.androidonlinequizapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -18,6 +19,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
+import edmt.dev.androidonlinequizapp.Common.Common;
 import edmt.dev.androidonlinequizapp.Interface.ItemClickListener;
 import edmt.dev.androidonlinequizapp.Model.Category;
 import edmt.dev.androidonlinequizapp.ViewHolder.CategoryViewHolder;
@@ -77,8 +79,11 @@ public class CategoryFragment extends Fragment {
                 viewHolder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
-                        Toast.makeText(getActivity(), String.format("%s|%s",adapter.getRef(position).getKey(),model.getName()),Toast.LENGTH_SHORT).show();
-                    }
+                        //Toast.makeText(getActivity(), String.format("%s|%s",adapter.getRef(position).getKey(),model.getName()),Toast.LENGTH_SHORT).show();
+                        Intent startGame = new Intent((getActivity()),Start.class);
+                        Common.categoryId = adapter.getRef(position).getKey();
+                        startActivity(startGame);
+                        }
                 });
             }
         };
