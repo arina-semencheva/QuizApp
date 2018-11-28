@@ -19,19 +19,12 @@ import edmt.dev.androidonlinequizapp.Common.Common;
 public class Playing extends AppCompatActivity implements View.OnClickListener {
 
     final static long INTERVAL = 1000; //1sec
-    final static long TIMEOUT = 7000;
+    final static long TIMEOUT = 30000;
     int progressValue = 0;
 
     CountDownTimer mCountDown;
     int index=0,score=0,thisQuestion=0,totalQuestion,correctAnswer;
-
-//    //Firebase
-//    FirebaseDatabase database;
-//    DatabaseReference questions;
-//
-//    //firebase
-//    database = FirebaseDatabase.getInstance();
-//    questions = database.getReference("Questions");
+    double bal;
 
     ProgressBar progressBar;
     ImageView question_image;
@@ -72,28 +65,35 @@ public class Playing extends AppCompatActivity implements View.OnClickListener {
     if (index < totalQuestion) //продалжать хранить вопросы в листе
     {
         Button clickedButton = (Button)view;
-        if (clickedButton.getText().equals(Common.questionList.get(index).getCorrectAnswer()))
+        if (clickedButton.getText().equals(Common.questionList.get(index).getAnswerA()))
         {
-            //выбор верного ответа
-            score+=10;
+            score+=0;
             correctAnswer++;
             showQuestion(++index); //следующий вопрос
-        }
-        else {
-            //если неверный ответ
-            Intent intent = new Intent(this,Done.class);
-            Bundle dataSend = new Bundle();
-            dataSend.putInt("SCORE",score);
-            dataSend.putInt("TOTAL",totalQuestion);
-            dataSend.putInt("CORRECT",correctAnswer);
-            intent.putExtras(dataSend);
-            startActivity(intent);
-            finish();
+        } else {
 
-        }
-        txtScore.setText(String.format("%d",score));
+        if (clickedButton.getText().equals(Common.questionList.get(index).getAnswerB()))
+        {
+            score+=1;
+            correctAnswer++;
+            showQuestion(++index); //следующий вопрос
+        } else {
+            if (clickedButton.getText().equals(Common.questionList.get(index).getAnswerC()))
+            {
+                score+=2;
+                 correctAnswer++;
+                showQuestion(++index); //следующий вопрос
+            } else {
+                if (clickedButton.getText().equals(Common.questionList.get(index).getAnswerD()))
+                {
+                    score+=3;
+                     correctAnswer++;
+                    showQuestion(++index); //следующий вопрос
+                } } } } }
+
+       // txtScore.setText(String.format("%d",score));
     }
-    }
+
 
     private void showQuestion(int index) {
         if (index < totalQuestion)
@@ -127,9 +127,12 @@ public class Playing extends AppCompatActivity implements View.OnClickListener {
         else
         {
             //если это финальный вопрос
+          bal = score*100/87;
+//            score = bal;
             Intent intent = new Intent(this,Done.class);
             Bundle dataSend = new Bundle();
-            dataSend.putInt("SCORE",score);
+           // dataSend.putDouble("BAL",bal);
+            dataSend.putInt("SCORE",score*100/87);
             dataSend.putInt("TOTAL",totalQuestion);
             dataSend.putInt("CORRECT",correctAnswer);
             intent.putExtras(dataSend);
@@ -139,6 +142,8 @@ public class Playing extends AppCompatActivity implements View.OnClickListener {
 
     }
 
+
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -147,7 +152,7 @@ public class Playing extends AppCompatActivity implements View.OnClickListener {
 
         mCountDown = new CountDownTimer(TIMEOUT, INTERVAL) {
             @Override
-            public void onTick(long minisec) {
+            public void onTick(long sec) {
             progressBar.setProgress(progressValue);
             progressValue++;
             }

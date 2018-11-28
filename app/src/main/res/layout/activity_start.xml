@@ -17,25 +17,36 @@
         android:layout_height="200dp"
         android:contentDescription="@string/todo" />
 
+    <TextView
+        android:layout_marginTop="250dp"
+        android:layout_marginHorizontal="11sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Сейчас вам предстоит пройти Оксфордский опросник счастья. На каждый ответ даётся 30 секунд. Вдохните поглубже! Успокойтесь и нажимайте на кнопку! :)"
+        android:textColor="@android:color/white"
+        android:background="#c3166300"
+        android:textSize="21sp" />
+
+
     <android.support.v7.widget.CardView
-        app:cardElevation="4dp"
-        android:layout_centerInParent="true"
-        android:layout_margin="35dp"
-        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="500sp"
+        android:layout_width="310sp"
         android:layout_height="wrap_content">
 
         <Button
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:id="@+id/btnPlay"
-            android:layout_margin="8dp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
             android:background="#AD1457"
             android:foreground="?android:attr/selectableItemBackground"
-            android:text="@string/play"
+            android:text="начать тест"
             android:textColor="@android:color/white"
             android:textStyle="bold"
-            android:theme="@style/MyButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:theme="@style/MyButton" />
 
     </android.support.v7.widget.CardView>
 

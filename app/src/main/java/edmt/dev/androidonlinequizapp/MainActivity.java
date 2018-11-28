@@ -76,17 +76,17 @@ public class MainActivity extends AppCompatActivity {
                         finish();
                     }
                     else
-                        Toast.makeText(MainActivity.this,"Wrong password !", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this,"Неправильный пароль !", Toast.LENGTH_SHORT).show();
 
                 }
                 else
                 {
-                    Toast.makeText(MainActivity.this,"Please, enter your user имя", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this,"Пожалуйста, введите имя пользователя", Toast.LENGTH_SHORT).show();
 
                 }
                 }
                 else
-                    Toast.makeText(MainActivity.this,"User is not exists! !", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this,"Пользователь не найден! !", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void showSignUpDialog() {
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);
-        alertDialog.setTitle("Sign Up");
+        alertDialog.setTitle("Регистрация нового пользователя");
         alertDialog.setMessage("Пожалуйста, введите все данные");
 
         LayoutInflater inflater = this.getLayoutInflater();
@@ -109,14 +109,14 @@ public class MainActivity extends AppCompatActivity {
 
         alertDialog.setView(sign_up_layout);
         alertDialog.setIcon(R.drawable.ic_account_circle_black_24dp);
-        alertDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+        alertDialog.setNegativeButton("Назад", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 dialogInterface.dismiss();
 
             }
         });
-        alertDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+        alertDialog.setPositiveButton("Отправить данные", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 final User user = new User(edtNewUser.getText().toString(),
@@ -126,12 +126,12 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         if (dataSnapshot.child(user.getUserName()).exists())
-                            Toast.makeText(MainActivity.this, "User already exist !", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "Имя пользователя уже занято!", Toast.LENGTH_SHORT).show();
                         else
                             {
                                 users.child(user.getUserName())
                                         .setValue(user);
-                                Toast.makeText(MainActivity.this,"User registration success !", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this,"Регистрация завершена успешно!", Toast.LENGTH_SHORT).show();
                             }
 
                     }

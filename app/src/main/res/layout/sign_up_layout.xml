@@ -14,7 +14,7 @@
         android:layout_height="wrap_content">
 <com.rengwuxian.materialedittext.MaterialEditText
     android:id="@+id/edtNewUserName"
-    android:hint="@string/user_name"
+    android:hint="имя пользователя"
     android:textColorHint="@color/colorPrimary"
     android:textColor="@color/colorPrimary"
     android:textSize="24sp"
@@ -28,7 +28,7 @@
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/edtNewPassword"
-            android:hint="@string/password"
+            android:hint="пароль"
             android:textColorHint="@color/colorPrimary"
             android:textColor="@color/colorPrimary"
             android:textSize="24sp"
@@ -43,7 +43,7 @@
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/edtNewEmail"
-            android:hint="@string/email"
+            android:hint="E-mail"
             android:textColorHint="@color/colorPrimary"
             android:textColor="@color/colorPrimary"
             android:textSize="24sp"

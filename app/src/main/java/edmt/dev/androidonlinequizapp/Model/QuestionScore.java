@@ -4,6 +4,7 @@ public class QuestionScore {
     private String QuestionScore;
     private String User;
     private String Score;
+    private String Bal;
 
     public QuestionScore() {
     }
@@ -12,6 +13,7 @@ public class QuestionScore {
         QuestionScore = questionScore;
         User = user;
         Score = score;
+
     }
 
     public String getQuestionScore() {
@@ -37,4 +39,5 @@ public class QuestionScore {
     public void setScore(String score) {
         Score = score;
     }
+
 }

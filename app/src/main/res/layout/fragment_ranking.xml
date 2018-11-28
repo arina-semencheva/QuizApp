@@ -18,26 +18,28 @@
 
         <LinearLayout
             android:orientation="horizontal"
-            android:weightSum="10"
+            android:weightSum="13"
             android:layout_gravity="center"
             android:gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="80dp">
 
             <TextView
-                android:text="Name"
-                android:textSize="24sp"
+                android:text="Пользователь"
+                android:textSize="22sp"
                 android:textColor="@android:color/white"
-                android:layout_weight="8"
-                android:layout_width="0dp"
+                android:gravity="left"
+                android:layout_weight="6"
+                android:layout_width="1dp"
                 android:layout_height="wrap_content" />
 
             <TextView
-                android:text="Score"
-                android:textSize="24sp"
+                android:text="Баллы"
+                android:gravity="right"
+                android:textSize="23sp"
                 android:textColor="@android:color/white"
-                android:layout_weight="2"
-                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_width="1dp"
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
