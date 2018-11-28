@@ -2,7 +2,7 @@ package edmt.dev.androidonlinequizapp.Model;
 
 public class Ranking {
     private String userName;
-    private  long score;
+    private long score;
 
     public Ranking() {
     }

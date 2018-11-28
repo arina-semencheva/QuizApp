@@ -3,7 +3,7 @@ package edmt.dev.androidonlinequizapp.Model;
 public class User {
     private String userName;
     private String password;
-    private  String email;
+    private String email;
 
 
     public User() {
@@ -38,6 +38,6 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
-    
+
 }
 

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -8,20 +7,20 @@
     tools:context=".Done">
 
     <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_margin="3dp"
         android:padding="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
 
         >
 
         <LinearLayout
-            android:orientation="vertical"
             android:id="@+id/btnGroup"
-            android:paddingTop="50dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="50dp">
 
             <TextView
                 android:id="@+id/txtScore"
@@ -48,12 +47,12 @@
                 android:textSize="30sp" />
 
             <ProgressBar
-                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                 android:id="@+id/doneProgressBar"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp" />
 
             <Button
                 android:id="@+id/btnTryAgain"
