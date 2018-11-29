@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_orange_light"
+    android:background="@drawable/p4"
     tools:context=".Playing">
 
     <ImageView
@@ -20,26 +20,31 @@
     <TextView
         android:id="@+id/question_text"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="140dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="45dp"
+
         android:gravity="center"
-        android:textSize="25dp"
+        android:textColor="@android:color/white"
+        android:textSize="28dp"
         android:visibility="invisible" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_margin="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="42dp"
         android:paddingTop="20dp">
 
         <LinearLayout
             android:id="@+id/group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
             android:orientation="vertical"
             android:paddingTop="10dp">
 
@@ -57,7 +62,7 @@
                     android:gravity="center_horizontal"
                     android:text="Вопрос"
                     android:textColor="@android:color/white"
-                    android:textSize="36sp" />
+                    android:textSize="28sp" />
 
                 <TextView
                     android:id="@+id/txtTotalQuestion"
@@ -67,7 +72,7 @@
                     android:gravity="center_horizontal"
                     android:text="@string/_1_10"
                     android:textColor="@android:color/white"
-                    android:textSize="36sp" />
+                    android:textSize="32sp" />
 
             </LinearLayout>
 
@@ -86,7 +91,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="#FF8a80"
+                android:background="#024356"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:text="@string/answer_a"
                 android:textColor="@android:color/white"
@@ -99,7 +104,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="#FF8a80"
+                android:background="#024356"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:text="@string/answer_b"
                 android:textColor="@android:color/white"
@@ -112,7 +117,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="#FF8a80"
+                android:background="#024356"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:text="@string/answer_c"
                 android:textColor="@android:color/white"
@@ -125,7 +130,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="#FF8a80"
+                android:background="#024356"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:text="@string/answer_d"
                 android:textColor="@android:color/white"
