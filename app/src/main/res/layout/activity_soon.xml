@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Soon"
+    android:background="@drawable/bg_vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:textColor="@android:color/black"
+        android:background="#e902e7aa"
+        android:layout_margin="5dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="Другие тесты уже скоро будут доступны! Ждите обновления!"
+        />
+
+    <Button
+        android:id="@+id/btnTryAgain"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="450dp"
+        android:background="#AD1457"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="Вернуться в меню"
+        android:textColor="@android:color/white"
+        android:textStyle="normal"
+        android:theme="@style/MyButton" />
+
+</RelativeLayout>

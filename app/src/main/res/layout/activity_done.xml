@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/bg_vertical"
+    android:background="@android:color/holo_red_light"
     tools:context=".Done">
 
     <RelativeLayout
@@ -62,7 +62,7 @@
                 android:layout_margin="3dp"
                 android:background="#AD1457"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:text="Пройти тест еще раз"
+                android:text="Вернуться в меню"
                 android:textColor="@android:color/white"
                 android:textStyle="bold"
                 android:theme="@style/MyButton" />

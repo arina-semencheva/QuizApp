@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AndroidOnlineQuizApp</string>
+    <string name="app_name">Оксфордский опросник счастья (OHI)</string>
     <string name="user_name">User name</string>
     <string name="password">Password</string>
     <string name="sign_up">Sign Up</string>

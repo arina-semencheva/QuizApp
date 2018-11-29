@@ -73,12 +73,18 @@ public class CategoryFragment extends Fragment {
                         .into(viewHolder.category_image);
 
                 viewHolder.setItemClickListener(new ItemClickListener() {
+
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
-                        //Toast.makeText(getActivity(), String.format("%s|%s",adapter.getRef(position).getKey(),model.getName()),Toast.LENGTH_SHORT).show();
                         Intent startGame = new Intent((getActivity()), Start.class);
+                        Intent soonGame = new Intent((getActivity()), Soon.class);
                         Common.categoryId = adapter.getRef(position).getKey();
-                        startActivity(startGame);
+                        if (Common.categoryId.equals("01")) {
+                            startActivity(startGame);
+                        } else {
+                            startActivity(soonGame);
+                        }
+
                     }
                 });
             }
