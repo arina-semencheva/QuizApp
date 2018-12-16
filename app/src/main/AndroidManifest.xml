@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edmt.dev.androidonlinequizapp">
 
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_icon"
+        android:resource="@drawable/ic_icon" />
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_color"
+        android:resource="@color/colorAccent" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_icon"
@@ -12,7 +19,7 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -24,6 +31,11 @@
             android:label="@string/title_activity_done"
             android:theme="@style/AppTheme" />
         <activity android:name=".Soon"></activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="394acc2dacbeec84c486eb8f9ee3bcd14e455037" />
+
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
